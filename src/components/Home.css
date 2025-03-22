@@ -1,0 +1,170 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
+
+@layer reset, theme, layout, content, components, utility;
+
+
+@layer reset {
+  body {
+    font-family: 'Rubik';
+    margin: 20px;
+    background: var(--secondary);
+  }
+  a, p, h1, h2, h3, section {
+    margin: 0 0 10px 0;
+    padding: 0;
+  }
+}
+
+@layer theme {
+  :root {
+    --primary: #1c9f6d;
+    --secondary: #f4f4f4;
+    --default: #333;
+  }
+}
+
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* Wrapper for Image and Banner */
+.image-wrapper {
+  position: relative; /* Establish a positioning context */
+  width: 200px; /* Match the image width */
+  height: 200px; /* Match the image height */
+  display: inline-block; /* Ensure the wrapper doesn't take full width */
+}
+
+.profile-image {
+  width: 150%;
+  height: 150%;
+  right: 900px;
+  border-radius: 50%;
+  object-fit: cover; /* Ensure the image fills the container */
+  cursor: pointer; /* Indicate the image is interactive */
+  z-index: 2; /* Ensure the image is above the banner */
+  position: absolute;
+}
+
+.Seta1 {
+  top: 50%;
+  width: 450px;
+  height: 400px;
+  transform: scaleX(-1);
+  rotate: 340deg;
+  right: 400px;
+  cursor: pointer; /* Indicate the image is interactive */
+  position: absolute;
+}
+.Seta2 {
+  top: -70%;
+  right: 400px;
+  width: 450px;
+  height: 500px;
+  transform: scaleX(-1);
+  rotate: 120deg;
+  cursor: pointer; /* Indicate the image is interactive */
+  position: absolute;
+}
+.Seta3 {
+  top: -30%;
+  right: 1120px;
+  width: 180px;
+  height: 100px;
+  transform: scaleX(-1);
+  rotate: 210deg;
+  cursor: pointer; /* Indicate the image is interactive */
+  position: absolute;
+}
+.Seta4 {
+  top: 35%;
+  right: -200px;
+  width: 700px;
+  height: 350px;
+  transform: scaleX(-1);
+  rotate: 180deg;
+  cursor: pointer; /* Indicate the image is interactive */
+  position: absolute;
+}
+/* Banner Styles */
+.banner {
+  position: absolute;
+  left: -900px; /* Position the banner to the right of the image */
+  top: 75%; /* Start from the center of the image */
+  transform: translateY(-50%); /* Center vertically */
+  width: 0;
+  height: 130%; /* Fixed height for the collapsed state */
+  background: linear-gradient(to bottom, #0963c3 50%, #a93512 50%); /* Two-color horizontal split */
+  /*background-color: #007bff;*/
+  overflow: hidden;
+  white-space: nowrap;
+  transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+  z-index: 1; /* Ensure the banner is below the image */
+  border-radius: 0 40px 40px 0; /* Circular left side */
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    calc(100% - 40px) 50%, /* Prominent triangular cut on the right */
+    100% 100%,
+    0 100%
+  );
+  padding: 20px 60px 20px 80px; /* Add padding for text */
+  box-sizing: border-box; /* Include padding in width/height calculations */
+  max-width: 2100px; /* Limit the maximum width of the banner */
+}
+
+.banner-text {
+  color: white;
+  font-size: 11px;
+  line-height: 1; /* Improve readability for multi-line text */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+/* Show Banner on Hover over Profile Image */
+.profile-image:hover ~ .banner {
+  width: calc(100vw - 100px); /* Expand to the right edge of the viewport */
+  height: auto; /* Allow height to adjust based on content */
+  max-height: 400px; /* Limit maximum height */
+}
+
+.profile-image:hover ~ .banner .banner-text {
+  opacity: 1;
+  transition-delay: 0.2s;
+}
+
+/* Seta and Textaum Styles */
+.Seta1,
+.Seta2,
+.Seta3,
+.Seta4,
+.Textaum {
+  transition: opacity 1.2s ease-out, opacity 0.3s ease-in; /* Smooth transition */
+  pointer-events: none; /* Disable click and hover interactions */
+  filter: grayscale(100%); /* Transform into black and white */
+}
+
+/* Hide Setas and Textaum on Hover over Profile Image */
+.profile-image:hover ~ .Seta1,
+.profile-image:hover ~ .Seta2,
+.profile-image:hover ~ .Seta3,
+.profile-image:hover ~ .Seta4,
+.profile-image:hover ~ .Textaum {
+  opacity: 0;
+}
+
+.Textaum {
+  color: #1c1f23;
+  width: 800px; /* Allow the text to take up as much space as it needs */
+  height: 4000px; /* Allow the height to adjust based on content */
+  right: -920px;
+  top: 50%;
+  position: absolute;
+  font-size: 100px;
+  font-family: 'Fascinate', cursive;
+  white-space: nowrap; /* Impede que o texto quebre */
+  overflow: auto; /* Esconde o texto que ultrapassar o tamanho da div */
+  text-overflow: ellipsis; /* Adiciona "..." se o texto for muito longo */
+}
+

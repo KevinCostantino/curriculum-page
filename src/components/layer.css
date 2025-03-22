@@ -1,0 +1,9 @@
+@layer Contact, Home, About, ExperienceSkills, Projects, header, App;
+
+@import "Contact.css" layer(Contact);
+@import "Home.css" layer(Home);
+@import "ExperienceSkills.css" layer(ExperienceSkills);
+@import "Projects.css" layer(Projects);
+@import "Header.css" layer(header);
+@import "About.css" layer(About);
+@import "../App.css" layer(App); /* Caminho correto para App.css */

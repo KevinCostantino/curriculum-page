@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: linear-gradient(to right, rgb(144, 170, 225), rgb(118, 88, 143));
+  color: #333;
+  border-top: none; /* Remove a borda superior */
+  border: 5px #333; /* Borda vermelha */
+
+}
+
+.App {
+  padding-top: 60px; /* Para compensar o cabeçalho fixo */
+  border: 30px solid #0a0b0b; /* Agora está correto */
+  border-top: none; /* Remove a borda superior */
+  padding: 20px;
+  margin: 0px;
+}
+
+
+
+html {
+  scroll-behavior: smooth;
+}

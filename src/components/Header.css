@@ -1,0 +1,51 @@
+/* Header.css */
+.header {
+  position: fixed;
+  top: 0;
+  right: 0px;
+  width: 100%;
+  background-color: #0a0b0b; /* Light blue background for the header */
+  padding: 10px 20px;
+  text-align: right;
+  z-index: 1000; /* Ensure the header stays on top */
+}
+
+.header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header nav ul li {
+  margin: 0 10px;
+}
+
+.nav-button {
+  background-color: #1E90FF; /* Dodger blue */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transform: skewX(-20deg); /* Skew to create parallelogram shape */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  outline: none; /* Remove default focus outline */
+}
+
+.nav-button span {
+  display: inline-block;
+  transform: skewX(20deg); /* Counter-skew the text to make it straight */
+}
+
+.nav-button:hover {
+  background-color: #00BFFF; /* Lighter blue on hover */
+  transform: skewX(-20deg) scale(1.1); /* Slightly enlarge on hover */
+}
+
+.nav-button:active {
+  background-color: #000080; /* Darker blue on click */
+}
