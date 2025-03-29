@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+
+.section {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .project-grid {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .project-block {
+    width: 45%;
+  }
+  
+  .project-block img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-info p {
+    margin: 10px 0;
+  }
+  
+  .experience-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .experience-box {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    width: 400px;
+    min-height: 400px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: left;
+  }
+  
+  .experience-box h3 {
+    margin-top: 0;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+  }
+  
+  .experience-box ul {
+    padding-left: 20px;
+  }
+  
+  .experience-box li {
+    margin-bottom: 8px;
+  }
+  
+  @media (max-width: 900px) {
+    .experience-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .experience-box {
+      width: 90%;
+      margin-bottom: 20px;
+    }
+  }
+
+  #experience h2 {
+    font-family: 'Fascinate', cursive;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #000000;
+  }

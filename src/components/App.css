@@ -4,7 +4,7 @@ body {
   background-image: linear-gradient(to right, rgb(144, 170, 225), rgb(118, 88, 143));
   color: #333;
   border-top: none; /* Remove a borda superior */
-  border: 5px #333; /* Borda vermelha */
+  border: 5px #333;
 
 }
 
@@ -12,12 +12,29 @@ body {
   padding-top: 60px; /* Para compensar o cabeçalho fixo */
   border: 30px solid #0a0b0b; /* Agora está correto */
   border-top: none; /* Remove a borda superior */
-  padding: 20px;
   margin: 0px;
+  min-height: 100vh; /* Garante que a página sempre ocupe a tela toda */
+  display: flex;
+  flex-direction: column;
 }
 
 
-
-html {
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
   scroll-behavior: smooth;
+
 }
+
+
+
+main {
+  flex: 1; /* Faz o conteúdo expandir corretamente */
+}
+
+
+
+
+
+

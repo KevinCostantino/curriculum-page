@@ -58,7 +58,7 @@ const Home = () => {
         </div>
 
       </div>
-      
+      <div className="Aposo"></div>
     </section>
     
   );

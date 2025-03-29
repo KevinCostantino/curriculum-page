@@ -1,26 +1,31 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
 
-@layer reset, theme, layout, content, components, utility;
+@layer Aposo, Seta3;
 
 
-@layer reset {
-  body {
-    font-family: 'Rubik';
-    margin: 20px;
-    background: var(--secondary);
-  }
-  a, p, h1, h2, h3, section {
-    margin: 0 0 10px 0;
-    padding: 0;
+@layer Aposo {
+  .Aposo {
+    padding-top: 60px; /* Para compensar o cabeçalho fixo */
+    border: 30px solid #0a0b0b; /* Agora está correto */
+    border-top: none; /* Remove a borda superior */
+    padding: 20px;
+    margin: 0px;
+    border-top: none; /* Remove a borda superior */
+    border: 5px #333;
   }
 }
 
-@layer theme {
-  :root {
-    --primary: #1c9f6d;
-    --secondary: #f4f4f4;
-    --default: #333;
+@layer Seta3 {
+  .Seta3 {
+    top: -30%;
+    right: 1120px;
+    width: 180px;
+    height: 100px;
+    transform: scaleX(-1);
+    rotate: 210deg;
+    cursor: pointer; /* Indicate the image is interactive */
+    position: absolute;
   }
 }
 
@@ -68,16 +73,7 @@
   cursor: pointer; /* Indicate the image is interactive */
   position: absolute;
 }
-.Seta3 {
-  top: -30%;
-  right: 1120px;
-  width: 180px;
-  height: 100px;
-  transform: scaleX(-1);
-  rotate: 210deg;
-  cursor: pointer; /* Indicate the image is interactive */
-  position: absolute;
-}
+
 .Seta4 {
   top: 35%;
   right: -200px;
@@ -157,7 +153,7 @@
 .Textaum {
   color: #1c1f23;
   width: 800px; /* Allow the text to take up as much space as it needs */
-  height: 4000px; /* Allow the height to adjust based on content */
+  height: 2600px; /* Allow the height to adjust based on content */
   right: -920px;
   top: 50%;
   position: absolute;

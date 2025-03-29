@@ -1,30 +1,88 @@
-.section {
-    padding: 60px 20px;
-    text-align: center;
-  }
-  
-  .project-grid {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-  }
-  
-  .project-block {
-    width: 45%;
-  }
-  
-  .project-block img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
-  
-  .contact-info {
-    display: flex;
+/* Heading style */
+#projects h2 {
+  font-family: 'Fascinate', cursive;
+  font-size: 3rem;
+  color: #1c1f23;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Projects container */
+.projects-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+/* Individual project box */
+.project-box {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 400px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  background-color: #1c1f23; /* Dark background by default */
+}
+
+.project-box:hover {
+  transform: translateY(-5px);
+  background-color: white; /* White background on hover */
+}
+
+/* Project link */
+.project-link {
+  text-decoration: none;
+  color: white; /* White text by default */
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.project-box:hover .project-link {
+  color: #1c1f23; /* Black text on hover */
+}
+
+/* Project image */
+.project-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+  transition: opacity 0.3s ease;
+}
+
+.project-box:hover .project-image {
+  opacity: 0.9;
+}
+
+/* Project content */
+.project-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.project-content h3 {
+  font-size: 1.3rem;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.project-box:hover .project-content h3 {
+  color: #1c1f23; /* Ensure text is black on hover */
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+  .projects-container {
     flex-direction: column;
     align-items: center;
   }
   
-  .contact-info p {
-    margin: 10px 0;
+  .project-box {
+    width: 90%;
+    margin-bottom: 30px;
   }
+}

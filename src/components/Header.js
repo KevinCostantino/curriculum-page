@@ -17,9 +17,9 @@ const Header = () => {
       <nav>
         <ul>
           <li><button className="nav-button" onClick={() => handleScroll('home')}>Home</button></li>
-          <li><button className="nav-button" onClick={() => handleScroll('about')}>About Me</button></li>
+          <li><button className="nav-button" onClick={() => handleScroll('experience')}>Experience</button></li>
           <li><button className="nav-button" onClick={() => handleScroll('projects')}>Projects</button></li>
-          <li><button className="nav-button" onClick={() => handleScroll('experience')}>Experience/Skills</button></li>
+          <li><button className="nav-button" onClick={() => handleScroll('skills')}>Skills</button></li>
           <li><button className="nav-button" onClick={() => handleScroll('contact')}>Contact</button></li>
         </ul>
       </nav>

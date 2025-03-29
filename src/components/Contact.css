@@ -1,30 +1,110 @@
-.section {
-    padding: 60px 20px;
-    text-align: center;
+.contact-footer {
+  background-color: #000;
+  color: white;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.contact-footer h2 {
+  font-family: 'Fascinate', cursive;
+  margin-bottom: 2rem;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.hexagon-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.hexagon {
+  position: relative;
+  width: 120px;
+  height: 140px;
+  margin: 10px;
+  background: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: white;
+}
+
+.hexagon:hover {
+  background: #333;
+  transform: scale(1.05);
+}
+
+.hexagon-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #42a5f5;
+}
+
+.hexagon-content span {
+  font-size: 0.8rem;
+  word-break: break-word;
+}
+
+.copyright {
+  margin-top: 3rem;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .hexagon {
+    width: 100px;
+    height: 115px;
   }
   
-  .project-grid {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
+  .hexagon-content span {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hexagon-grid {
+    gap: 0.5rem;
   }
   
-  .project-block {
-    width: 45%;
+  .hexagon {
+    width: 80px;
+    height: 92px;
+    margin: 5px;
   }
   
-  .project-block img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
+  .contact-icon {
+    font-size: 1.2rem;
   }
   
-  .contact-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .hexagon-content span {
+    font-size: 0.6rem;
   }
-  
-  .contact-info p {
-    margin: 10px 0;
-  }
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Garante que o footer fique no final */
+.contact-footer {
+  margin-top: auto;
+}

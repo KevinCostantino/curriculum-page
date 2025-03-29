@@ -6,17 +6,30 @@ import DigitalClock from './media/DigitalClock.png';
 const Projects = () => {
   return (
     <section id="projects" className="section">
-      <h2>Projects</h2>
-      <div className="project-grid">
-        <div className="project-block">
-        <img src={ProjetoRPG} alt="Project 1" style={{ width: "600px", height: "auto" }} />
-        <p>Demonstração de jogo web RPG.</p>
-          <a href="https://kevincostantino.github.io/JavaScript_Pokemon_RPG/" target="_blank" rel="noopener noreferrer">Conferir Projeto</a>
+      <h2>Projetos</h2>
+      <div className="projects-container">
+        <div className="project-box">
+          <a href="https://kevincostantino.github.io/JavaScript_Pokemon_RPG/" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             className="project-link">
+            <img src={ProjetoRPG} alt="RPG Project" className="project-image" />
+            <div className="project-content">
+              <h3>Demonstração de jogo web RPG</h3>
+            </div>
+          </a>
         </div>
-        <div className="project-block">
-        <img src={DigitalClock} alt="Project 2"  style={{ width: "600px", height: "auto" }} />
-        <p>Relógio Digital (React + Vitae).</p>
-          <a href="https://kevincostantino.github.io/DigitalClock/" target="_blank" rel="noopener noreferrer">Conferir Projeto</a>
+        
+        <div className="project-box">
+          <a href="https://kevincostantino.github.io/DigitalClock/" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             className="project-link">
+            <img src={DigitalClock} alt="Digital Clock" className="project-image" />
+            <div className="project-content">
+              <h3>Relógio Digital (React + Vite)</h3>
+            </div>
+          </a>
         </div>
       </div>
     </section>
