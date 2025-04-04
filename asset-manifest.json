@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/curriculum-page/static/css/main.7c7bfb12.css",
+    "main.js": "/curriculum-page/static/js/main.6b77d5d7.js",
+    "static/js/453.308ef216.chunk.js": "/curriculum-page/static/js/453.308ef216.chunk.js",
+    "static/media/DigitalClock.png": "/curriculum-page/static/media/DigitalClock.0c3746ba0d1c8ed3a191.png",
+    "static/media/ProjetoRPG.jpeg": "/curriculum-page/static/media/ProjetoRPG.3e405478d2990d4b1225.jpeg",
+    "static/media/foto_curriculo.jpeg": "/curriculum-page/static/media/foto_curriculo.cb31c8f4a6b9c47f11ef.jpeg",
+    "static/media/Seta_1.png": "/curriculum-page/static/media/Seta_1.49105c9323144cf28051.png",
+    "static/media/Seta_2.png": "/curriculum-page/static/media/Seta_2.366389064c5b487c0e3b.png",
+    "index.html": "/curriculum-page/index.html",
+    "main.7c7bfb12.css.map": "/curriculum-page/static/css/main.7c7bfb12.css.map",
+    "main.6b77d5d7.js.map": "/curriculum-page/static/js/main.6b77d5d7.js.map",
+    "453.308ef216.chunk.js.map": "/curriculum-page/static/js/453.308ef216.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7c7bfb12.css",
+    "static/js/main.6b77d5d7.js"
+  ]
+}
