@@ -17,16 +17,16 @@ const Header = () => {
       
       if (id === 'home') {
         // Home: scroll para o topo
-        offset = 45;
+        offset = -12;
       } else if (id === 'experience') {
         // Experience: offset menor para mostrar mais conteúdo
-        offset = headerHeight - 70;
+        offset = headerHeight - 115;
       } else if (id === 'projects') {
         // Projects: centralizar na tela
-        offset = headerHeight - 90;
+        offset = headerHeight - 100;
       } else if (id === 'skills') {
         // Skills: centralizar o gráfico radar
-        offset = headerHeight - 30;
+        offset = headerHeight - 90;
       } else if (id === 'contact') {
         // Contact: mostrar toda a seção
         offset = headerHeight + 50;
@@ -49,6 +49,18 @@ const Header = () => {
       const sections = ['home', 'experience', 'projects', 'skills', 'contact'];
       const scrollPosition = window.scrollY + 100;
       
+      // Verificar se chegou exatamente no fim da página (não pode mais scrollar)
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+      const scrollTop = window.scrollY;
+      
+      // Se chegou exatamente no fim (não pode mais scrollar), ativar Contact
+      if (scrollTop + windowHeight >= documentHeight - 500) {
+        setActiveSection('contact');
+        return;
+      }
+      
+      // Lógica normal de detecção por seção
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = document.getElementById(sections[i]);
         if (section && section.offsetTop <= scrollPosition) {

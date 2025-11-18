@@ -4,7 +4,7 @@ import fotoCurriculo from './media/foto_curriculo.jpeg';
 import { FaCode, FaDatabase, FaReact, FaPython, FaJsSquare, FaCogs } from 'react-icons/fa';
 
 const Home = () => {
-  const skills = ['Python', 'React', 'JavaScript', 'C#', 'Machine Learning', 'APIs RESTful'];
+  const skills = ['Fullstack (foco em Front-End)', 'Python',, 'PostgreSQL', 'React', 'TypeScript'];
 
   return (
     <section id="home" className="section">
@@ -32,28 +32,15 @@ const Home = () => {
             <h2>Engenheiro da Computação e Desenvolvedor</h2>
             
             <p>
-              Graduado em Engenharia de Computação com ampla experiência no desenvolvimento de
-              software e na criação de soluções tecnológicas avançadas.
+              Graduado em Engenharia de Computação, possuo ampla experiência no desenvolvimento de software e na criação de soluções tecnológicas inovadoras. Na minha posição mais recente, atuei em uma empresa de investimentos como desenvolvedor front-end, sendo responsável pela aplicação bancária corporativa construída com TypeScript e Angular, garantindo interfaces intuitivas, seguras e de alto desempenho.
             </p>
             
             <p>
-              Na minha posição mais recente, fui responsável pela implementação e manutenção de APIs RESTful,
-              garantindo a integração eficiente entre sistemas internos e externos. Meu trabalho incluiu o uso de
-              linguagens e frameworks como Python, além do desenvolvimento de testes unitários e de integração,
-              assegurando a qualidade e a estabilidade das aplicações.
+              Anteriormente, fui responsável pela implementação e manutenção de APIs RESTful em Python, além do desenvolvimento de testes unitários e de integração, assegurando a qualidade e a estabilidade das aplicações. Antes disso, atuei como desenvolvedor de software fullstack, criando soluções personalizadas com Machine Learning para prever tendências, identificar padrões e gerar relatórios estratégicos que apoiaram a tomada de decisões baseada em dados.
             </p>
             
             <p>
-              Anteriormente, atuei como Software Developer, projetando e implementando modelos de
-              inteligência artificial voltados para a análise de dados complexos. Desenvolvi soluções
-              personalizadas para predição de tendências e identificação de padrões, além de elaborar relatórios
-              estratégicos que forneceram insights valiosos para a tomada de decisões.
-            </p>
-            
-            <p>
-              Sou um profissional orientado à inovação e à excelência técnica, com habilidades que vão do
-              desenvolvimento de software à aplicação prática de inteligência artificial, sempre buscando soluções
-              eficazes para problemas desafiadores.
+              Sou um profissional orientado à inovação e à excelência técnica, com expertise que abrange desde o desenvolvimento web e mobile até a aplicação prática de inteligência artificial, sempre buscando soluções eficazes e escaláveis para desafios complexos.
             </p>
 
             <div className="skills-preview">

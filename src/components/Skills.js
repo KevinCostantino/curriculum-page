@@ -4,16 +4,21 @@ import './Skills.css';
 const Skills = () => {
   // Dados das habilidades com experiência
   const skills = [
-    { name: 'Python', level: 3, color: '#3776ab', experience: '3+ anos', category: 'Backend' },
-    { name: 'C#', level: 2, color: '#9C27B0', experience: '2 anos', category: 'Backend' },
-    { name: 'MySQL', level: 1, color: '#4479A1', experience: '1 ano', category: 'Database' },
-    { name: 'Machine Learning', level: 2, color: '#0F9D58', experience: '2 anos', category: 'AI/ML' },
-    { name: 'React', level: 2, color: '#61DAFB', experience: '2 anos', category: 'Frontend' },
-    { name: 'Javascript', level: 4, color: '#F7DF1E', experience: '4+ anos', category: 'Frontend' },
-    { name: 'PHP', level: 1, color: '#777BB4', experience: '1 ano', category: 'Backend' },
+    { name: 'Python', level: 4, color: '#3776ab', experience: '3+ anos', category: 'Backend' },
+    { name: 'TypeScript', level: 4, color: '#3178c6', experience: '2+ anos', category: 'Frontend' },
+    { name: 'C#', level: 3, color: '#9C27B0', experience: '1+ anos', category: 'Backend' },
+    { name: 'React', level: 5, color: '#61DAFB', experience: '3+ anos', category: 'Frontend' },
+    { name: 'Javascript', level: 5, color: '#F7DF1E', experience: '3+ anos', category: 'Frontend' },
+    { name: 'Node.js', level: 3, color: '#68A063', experience: '2+ anos', category: 'Backend' },
+    { name: 'Nest.js', level: 2, color: '#E0234E', experience: '1+ anos', category: 'Backend' },
+    { name: 'PostgreSQL', level: 3, color: '#336791', experience: '2+ anos', category: 'Database' },
+    { name: 'MongoDB', level: 2, color: '#47A248', experience: '2+ anos', category: 'Database' },
+    { name: 'MySQL', level: 2, color: '#4479A1', experience: '1+ anos', category: 'Database' },
+    { name: 'Docker', level: 2, color: '#2496ED', experience: '1+ anos', category: 'DevOps' },
+    { name: 'AWS', level: 1, color: '#FF9900', experience: '6+ meses', category: 'DevOps' },
   ];
 
-  const categories = ['Frontend', 'Backend', 'Database', 'AI/ML'];
+  const categories = ['Frontend', 'Backend', 'Database', 'DevOps'];
 
   // Configurações do gráfico
   const layers = 5;
@@ -48,8 +53,8 @@ const Skills = () => {
       <div className="skills-header">
         <h2>Habilidades & Tecnologias</h2>
         <p>
-          Experiência em desenvolvimento Fullstack com foco em soluções inovadoras e escaláveis.
-          Especializado em tecnologias modernas e metodologias ágeis.
+          Experiência em desenvolvimento Fullstack com forte foco em Front-End, especializado em soluções inovadoras e escaláveis.
+          Domínio de tecnologias modernas, arquiteturas em nuvem e metodologias ágeis.
         </p>
       </div>
       
@@ -186,37 +191,71 @@ const Skills = () => {
       </div>
           </div>
 
-        {/* Legenda melhorada */}
+        {/* Legenda melhorada com duas colunas */}
         <div className="skills-legend">
           <h3>Níveis de Proficiência</h3>
-          <div className="skills-list">
-            {skills.map((skill, index) => (
-              <div key={skill.name} className="skill-item" style={{ animationDelay: `${index * 0.1}s` }}>
-                <div className="skill-info">
-                  <span 
-                    className="skill-color-marker" 
-                    style={{ backgroundColor: skill.color }}
-                  />
-                  <div className="skill-details">
-                    <span className="skill-name">{skill.name}</span>
-                    <span className="skill-category">{skill.category}</span>
-                  </div>
-                </div>
-                <div className="skill-metrics">
-                  <span className="skill-experience">{skill.experience}</span>
-                  <div className="skill-progress">
-                    <div 
-                      className="skill-progress-fill" 
-                      style={{ 
-                        width: `${(skill.level / 5) * 100}%`,
-                        backgroundColor: skill.color 
-                      }}
+          <div className="skills-columns">
+            {/* Primeira coluna - 7 primeiros */}
+            <div className="skills-column">
+              {skills.slice(0, 7).map((skill, index) => (
+                <div key={skill.name} className="skill-item" style={{ animationDelay: `${index * 0.1}s` }}>
+                  <div className="skill-info">
+                    <span 
+                      className="skill-color-marker" 
+                      style={{ backgroundColor: skill.color }}
                     />
+                    <div className="skill-details">
+                      <span className="skill-name">{skill.name}</span>
+                      <span className="skill-category">{skill.category}</span>
+                    </div>
                   </div>
-                  <span className="skill-level">{skill.level}/5</span>
+                  <div className="skill-metrics">
+                    <span className="skill-experience">{skill.experience}</span>
+                    <div className="skill-progress">
+                      <div 
+                        className="skill-progress-fill" 
+                        style={{ 
+                          width: `${(skill.level / 5) * 100}%`,
+                          backgroundColor: skill.color 
+                        }}
+                      />
+                    </div>
+                    <span className="skill-level">{skill.level}/5</span>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+            
+            {/* Segunda coluna - resto das skills */}
+            <div className="skills-column">
+              {skills.slice(7).map((skill, index) => (
+                <div key={skill.name} className="skill-item" style={{ animationDelay: `${(index + 7) * 0.1}s` }}>
+                  <div className="skill-info">
+                    <span 
+                      className="skill-color-marker" 
+                      style={{ backgroundColor: skill.color }}
+                    />
+                    <div className="skill-details">
+                      <span className="skill-name">{skill.name}</span>
+                      <span className="skill-category">{skill.category}</span>
+                    </div>
+                  </div>
+                  <div className="skill-metrics">
+                    <span className="skill-experience">{skill.experience}</span>
+                    <div className="skill-progress">
+                      <div 
+                        className="skill-progress-fill" 
+                        style={{ 
+                          width: `${(skill.level / 5) * 100}%`,
+                          backgroundColor: skill.color 
+                        }}
+                      />
+                    </div>
+                    <span className="skill-level">{skill.level}/5</span>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

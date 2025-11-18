@@ -20,20 +20,34 @@ const Experience = () => {
       icon: '🔬'
     },
     {
-      period: '01/2024 - Presente',
+      period: '01/2024 - 12/2024',
       company: 'Elettrica Solar',
-      role: 'Desenvolvedor Full Stack',
-      duration: '11+ meses',
-      area: 'Desenvolvimento e administração',
+      role: 'Desenvolvedor e assistente administrativo',
+      duration: '1 ano',
+      area: 'Desenvolvimento e assistência administrativa',
       type: 'Tempo Integral',
       activities: [
-        'Criação de programa Python de gerenciamento de dados',
-        'Projeção e implementação de interfaces para análise de dados',
-        'Desenvolvimento de soluções personalizadas',
-        'Otimização de processos administrativos',
-        'Integração de sistemas e APIs'
+        'Criação de programa Python de gerenciamento de dados dos clientes que negociaram com a empresa',
+        'Projeção e implementação de interfaces para análise de dados para usuários da empresa',
+        'Desenvolvimento de soluções personalizadas para atender às necessidades específicas de clientes e projetos, como predição de tendências e identificação de padrões em grandes volumes de dados'
       ],
       icon: '⚡'
+    },
+    {
+      period: '05/2025 - 11/2025',
+      company: 'Globoo',
+      role: 'Desenvolvedor Front-End',
+      duration: '6 meses',
+      area: 'Desenvolvimento Front-End',
+      type: 'Tempo Integral',
+      activities: [
+        'Implementei novas funcionalidades e melhorias visuais na aplicação da empresa, desde mudança de estilo de um cabeçalho até seções inteiras da aplicação tanto na versão web quanto mobile',
+        'Desenvolvi a aplicação utilizando TypeScript e Angular para atender às demandas de negócios e requisitos de projetos',
+        'Corrigi erros e problemas relatados por usuários.',
+        'Realizei testes para garantir a funcionalidade adequada das correções implementadas'
+
+      ],
+      icon: '🌐'
     }
   ];
 

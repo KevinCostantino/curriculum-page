@@ -53,6 +53,9 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .project-box::before {
@@ -80,9 +83,11 @@
 .project-link {
   text-decoration: none;
   color: inherit;
-  display: block;
+  display: flex;
+  flex-direction: column;
   position: relative;
   overflow: hidden;
+  height: 100%;
 }
 
 .project-image {
@@ -121,6 +126,9 @@
 .project-content {
   padding: 2rem;
   text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-content h3 {
@@ -135,7 +143,7 @@
   color: #666;
   font-size: 1rem;
   line-height: 1.6;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.0rem;
 }
 
 .project-tags {
@@ -143,6 +151,8 @@
   flex-wrap: wrap;
   gap: 0.5rem;
   justify-content: center;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.0rem;
 }
 
 .project-tag {
@@ -157,7 +167,7 @@
 .project-stats {
   display: flex;
   justify-content: space-between;
-  margin-top: 1rem;
+  margin-top: auto;
   padding-top: 1rem;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   font-size: 0.9rem;
