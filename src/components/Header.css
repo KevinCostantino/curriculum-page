@@ -81,6 +81,23 @@
 }
 
 .nav-button.active {
-  background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
-  box-shadow: 0 4px 20px rgba(255, 107, 107, 0.5);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.6);
+  transform: skewX(-15deg) scale(1.08);
+}
+
+.nav-button.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border-radius: 1px;
+}
+
+.nav-button.active span {
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
