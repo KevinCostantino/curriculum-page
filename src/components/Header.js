@@ -16,11 +16,11 @@ const Header = () => {
     <header className="header">
       <nav>
         <ul>
-          <li><button className="nav-button" onClick={() => handleScroll('home')}>Home</button></li>
-          <li><button className="nav-button" onClick={() => handleScroll('experience')}>Experience</button></li>
-          <li><button className="nav-button" onClick={() => handleScroll('projects')}>Projects</button></li>
-          <li><button className="nav-button" onClick={() => handleScroll('skills')}>Skills</button></li>
-          <li><button className="nav-button" onClick={() => handleScroll('contact')}>Contact</button></li>
+          <li><button className="nav-button" onClick={() => handleScroll('home')}><span>Home</span></button></li>
+          <li><button className="nav-button" onClick={() => handleScroll('experience')}><span>Experience</span></button></li>
+          <li><button className="nav-button" onClick={() => handleScroll('projects')}><span>Projects</span></button></li>
+          <li><button className="nav-button" onClick={() => handleScroll('skills')}><span>Skills</span></button></li>
+          <li><button className="nav-button" onClick={() => handleScroll('contact')}><span>Contact</span></button></li>
         </ul>
       </nav>
     </header>

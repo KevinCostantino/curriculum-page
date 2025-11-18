@@ -2,34 +2,70 @@ import React from 'react';
 import './Experience.css';
 
 const Experience = () => {
-  return (
-    <section id="experience" className="section">
-      <br /><br /><br /><br /><br />
-      <h2>Experiências</h2>
-      <div className="experience-container">
-        <div className="experience-box">
-          <h3>06/2022 - 12/2023 : INOVISÃO (UCDB)</h3>
-          <p><strong>Área de atuação:</strong> Pesquisa e produção de IA</p>
-          <p><strong>Atividade:</strong> Voluntário</p>
-          <p><strong>Duração:</strong> 1 ano e 6 meses</p>
-          <ul>
-            <li>Implementação e manutenção de APIs RESTful para integração com sistemas internos</li>
-            <li>Atuação com linguagens e bibliotecas como Python e Pandas</li>
-            <li>Monitoramento do desempenho do sistema em execução</li>
-          </ul>
-        </div>
+  const experiences = [
+    {
+      period: '06/2022 - 12/2023',
+      company: 'INOVISÃO (UCDB)',
+      role: 'Pesquisador de IA - Voluntário',
+      duration: '1 ano e 6 meses',
+      area: 'Pesquisa e produção de IA',
+      type: 'Voluntário',
+      activities: [
+        'Implementação e manutenção de APIs RESTful para integração com sistemas internos',
+        'Atuação com linguagens e bibliotecas como Python e Pandas',
+        'Monitoramento do desempenho do sistema em execução',
+        'Desenvolvimento de modelos de machine learning',
+        'Análise de dados e geração de insights'
+      ],
+      icon: '🔬'
+    },
+    {
+      period: '01/2024 - Presente',
+      company: 'Elettrica Solar',
+      role: 'Desenvolvedor Full Stack',
+      duration: '11+ meses',
+      area: 'Desenvolvimento e administração',
+      type: 'Tempo Integral',
+      activities: [
+        'Criação de programa Python de gerenciamento de dados',
+        'Projeção e implementação de interfaces para análise de dados',
+        'Desenvolvimento de soluções personalizadas',
+        'Otimização de processos administrativos',
+        'Integração de sistemas e APIs'
+      ],
+      icon: '⚡'
+    }
+  ];
 
-        <div className="experience-box">
-          <h3>01/2024 - Presente : Elettrica Solar</h3>
-          <p><strong>Área de atuação:</strong> Desenvolvedor e assistente administrativo</p>
-          <p><strong>Atividade:</strong> Tempo Integral</p>
-          <p><strong>Duração:</strong> 6+ meses</p>
-          <ul>
-            <li>Criação de programa Python de gerenciamento de dados</li>
-            <li>Projeção e implementação de interfaces para análise de dados</li>
-            <li>Desenvolvimento de soluções personalizadas</li>
-          </ul>
-        </div>
+  return (
+    <section id="experience">
+      <h2>Experiências Profissionais</h2>
+      <div className="experience-container">
+        {experiences.map((exp, index) => (
+          <div key={index} className="experience-box">
+            <div className="timeline">
+              <div className="timeline-icon">{exp.icon}</div>
+              <div className="timeline-content">
+                <div className="timeline-period">{exp.period}</div>
+                <div className="timeline-role">{exp.role}</div>
+              </div>
+            </div>
+            
+            <h3>{exp.company}</h3>
+            
+            <div className="experience-details">
+              <p><strong>Área de atuação:</strong> {exp.area}</p>
+              <p><strong>Tipo:</strong> {exp.type}</p>
+              <p><strong>Duração:</strong> {exp.duration}</p>
+            </div>
+            
+            <ul>
+              {exp.activities.map((activity, idx) => (
+                <li key={idx}>{activity}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
     </section>
   );

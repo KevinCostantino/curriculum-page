@@ -10,7 +10,8 @@ body {
 
 .App {
   padding-top: 60px; /* Para compensar o cabeçalho fixo */
-  border: 30px solid #0a0b0b; /* Agora está correto */
+  border-left: 30px solid #0a0b0b; /* Agora está correto */
+  border-right: 30px solid #1a1a1a; /* Agora está correto */
   border-top: none; /* Remove a borda superior */
   margin: 0px;
   min-height: 100vh; /* Garante que a página sempre ocupe a tela toda */

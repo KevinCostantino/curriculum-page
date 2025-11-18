@@ -1,66 +1,70 @@
 import React from 'react';
 import './Home.css';
 import fotoCurriculo from './media/foto_curriculo.jpeg';
-import Seta_1 from './media/Seta_1.png';
-import Seta_2 from './media/Seta_2.png';
-import Seta_3 from './media/Seta_3.png';
-import Seta_4 from './media/Seta_4.png';
+import { FaCode, FaDatabase, FaReact, FaPython, FaJsSquare, FaCogs } from 'react-icons/fa';
 
 const Home = () => {
+  const skills = ['Python', 'React', 'JavaScript', 'C#', 'Machine Learning', 'APIs RESTful'];
+
   return (
     <section id="home" className="section">
-      {/* Wrapper for Image and Banner */}
+      <div className="home-container">
+        <div className="profile-section">
+          <div className="image-wrapper">
+            <img 
+              src={fotoCurriculo} 
+              alt="Kevin Nicolas Costantino - Engenheiro da Computação" 
+              className="profile-image" 
+            />
+            <FaCode className="programming-icon icon1 floating-element" />
+            <FaReact className="programming-icon icon2 floating-element" />
+            <FaPython className="programming-icon icon3 floating-element" />
+            <FaDatabase className="programming-icon icon4 floating-element" />
+            <FaJsSquare className="programming-icon icon5 floating-element" />
+            <FaCogs className="programming-icon icon6 floating-element" />
 
+          </div>
+        </div>
 
-      <div className="image-wrapper">
-        <img src={fotoCurriculo} alt="Kevin Nicolas Costantino" className="profile-image" />
-        <img src={Seta_1} alt="Kevin Nicolas Costantino" className="Seta1" />
-        <img src={Seta_2} alt="Kevin Nicolas Costantino" className="Seta2" />
-        <img src={Seta_3} alt="Kevin Nicolas Costantino" className="Seta3" />
-        <img src={Seta_4} alt="Kevin Nicolas Costantino" className="Seta4" />
-        <div style={{sfontFamily: 'Fascinate, cursive' }} className="Textaum"> 
-   PASSE O MOUSE 
-   <br />POR CIMA
-</div>
-
-        <div className="banner">
-          <span className="banner-text">
-          <br />
+        <div className="content-section">
+          <div className="intro-text">
             <h1>Kevin Nicolas Costantino</h1>
-            <h2 style={{ fontSize: '13px' }}>Engenheiro da Computação e Desenvolvedor</h2>
-            <br />
-            <br />
+            <h2>Engenheiro da Computação e Desenvolvedor</h2>
             
-            <p style={{ paddingLeft: '180px' }}>
-              Graduado em Engenharia de Computação, adquiri ampla experiência no desenvolvimento de
+            <p>
+              Graduado em Engenharia de Computação com ampla experiência no desenvolvimento de
               software e na criação de soluções tecnológicas avançadas.
             </p>
-            <p style={{ paddingLeft: '180px' }}>
+            
+            <p>
               Na minha posição mais recente, fui responsável pela implementação e manutenção de APIs RESTful,
               garantindo a integração eficiente entre sistemas internos e externos. Meu trabalho incluiu o uso de
               linguagens e frameworks como Python, além do desenvolvimento de testes unitários e de integração,
               assegurando a qualidade e a estabilidade das aplicações.
             </p>
-            <p style={{ paddingLeft: '180px' }}>
+            
+            <p>
               Anteriormente, atuei como Software Developer, projetando e implementando modelos de
-              inteligência artificial voltados para a análise de dados complexos. Nessa função, desenvolvi soluções
+              inteligência artificial voltados para a análise de dados complexos. Desenvolvi soluções
               personalizadas para predição de tendências e identificação de padrões, além de elaborar relatórios
               estratégicos que forneceram insights valiosos para a tomada de decisões.
             </p>
-            <p style={{ paddingLeft: '180px' }}>
+            
+            <p>
               Sou um profissional orientado à inovação e à excelência técnica, com habilidades que vão do
               desenvolvimento de software à aplicação prática de inteligência artificial, sempre buscando soluções
               eficazes para problemas desafiadores.
             </p>
 
-          </span>
-
+            <div className="skills-preview">
+              {skills.map((skill, index) => (
+                <span key={index} className="skill-tag">{skill}</span>
+              ))}
+            </div>
+          </div>
         </div>
-
       </div>
-      <div className="Aposo"></div>
     </section>
-    
   );
 };
 
