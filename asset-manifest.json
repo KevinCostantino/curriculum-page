@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/curriculum-page/static/css/main.bf2cedba.css",
+    "main.js": "/curriculum-page/static/js/main.f495047e.js",
+    "static/js/488.0a6fbffb.chunk.js": "/curriculum-page/static/js/488.0a6fbffb.chunk.js",
+    "static/media/DigitalClock.png": "/curriculum-page/static/media/DigitalClock.0c3746ba0d1c8ed3a191.png",
+    "static/media/Analisa_Gastos.png": "/curriculum-page/static/media/Analisa_Gastos.db0b87fe432fbd440a15.png",
+    "static/media/AI_Chat_WhatsApp.png": "/curriculum-page/static/media/AI_Chat_WhatsApp.bfc77d594f85a6f701c8.png",
+    "static/media/ProjetoRPG.jpeg": "/curriculum-page/static/media/ProjetoRPG.3e405478d2990d4b1225.jpeg",
+    "static/media/Sistema_De_Notificações.png": "/curriculum-page/static/media/Sistema_De_Notificações.3b5856bbee39645b6f29.png",
+    "static/media/foto_curriculo.jpeg": "/curriculum-page/static/media/foto_curriculo.cb31c8f4a6b9c47f11ef.jpeg",
+    "static/media/EncurtadorLink.png": "/curriculum-page/static/media/EncurtadorLink.67f7468ba0f06b4374d7.png",
+    "static/media/TriviD_fundo.jpeg": "/curriculum-page/static/media/TriviD_fundo.c128d30f8bbe56bd0804.jpeg",
+    "static/media/Gestão_Tarefas.jpg": "/curriculum-page/static/media/Gestão_Tarefas.ce2d1c64440ffa642a18.jpg",
+    "index.html": "/curriculum-page/index.html",
+    "main.bf2cedba.css.map": "/curriculum-page/static/css/main.bf2cedba.css.map",
+    "main.f495047e.js.map": "/curriculum-page/static/js/main.f495047e.js.map",
+    "488.0a6fbffb.chunk.js.map": "/curriculum-page/static/js/488.0a6fbffb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bf2cedba.css",
+    "static/js/main.f495047e.js"
+  ]
+}
