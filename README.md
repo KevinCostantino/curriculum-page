@@ -1,70 +1,137 @@
-# Getting Started with Create React App
+# 💼 Curriculum Page - Kevin Costantino
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Deploy Status](https://img.shields.io/badge/Deploy-Live-success)](https://kevincostantino.github.io/curriculum-page/)
+[![React](https://img.shields.io/badge/React-18.2.0-blue)](https://reactjs.org/)
+[![GitHub Pages](https://img.shields.io/badge/Hosted-GitHub%20Pages-green)](https://pages.github.com/)
 
-## Available Scripts
+> **Página de currículo profissional desenvolvida em React com design moderno e responsivo**
 
-In the project directory, you can run:
+🌐 **[Ver Página ao Vivo](https://kevincostantino.github.io/curriculum-page/)**
+
+## 🚀 Sobre o Projeto
+
+Esta é uma página de currículo interativa e moderna, desenvolvida com React e otimizada para GitHub Pages. O projeto apresenta um design glassmorphism com animações suaves e navegação intuitiva.
+
+### ✨ Funcionalidades
+
+- **🏠 Home**: Seção principal com foto de perfil e efeito hover para descrição
+- **💼 Experience**: Timeline profissional com histórico de trabalho
+- **🎯 Projects**: Showcase de projetos com cards responsivos
+- **⚡ Skills**: Radar chart interativo com habilidades técnicas
+- **📞 Contact**: Seção de contato com botões estilizados
+- **🎨 Design**: Glassmorphism moderno e totalmente responsivo
+
+### 🛠️ Tecnologias
+
+- **React 18.2.0** - Framework principal
+- **React Icons 4.10.1** - Biblioteca de ícones
+- **CSS3** - Estilização com Flexbox/Grid
+- **GitHub Pages** - Hospedagem
+- **gh-pages** - Deploy automático
+
+## 📦 Scripts Disponíveis
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Executa a aplicação em modo de desenvolvimento.\
+Abra [http://localhost:3000](http://localhost:3000) para visualizar no navegador.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Constrói a aplicação para produção na pasta `build`.\
+Otimiza o build para melhor performance com arquivos minificados.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `npm run deploy`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**🚀 Script personalizado para GitHub Pages**\
+Executa o build de produção e faz deploy automático para GitHub Pages.
 
-### `npm run eject`
+### `npm test`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Executa os testes em modo interativo.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🔧 Instalação e Configuração
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+# Clone o repositório
+git clone https://github.com/KevinCostantino/curriculum-page.git
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Entre no diretório
+cd curriculum-page
 
-## Learn More
+# Instale as dependências
+npm install
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Inicie o servidor de desenvolvimento
+npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🌐 Deploy no GitHub Pages
 
-### Code Splitting
+O projeto está configurado para deploy automático no GitHub Pages:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+# Build e deploy em um comando
+npm run deploy
+```
 
-### Analyzing the Bundle Size
+### Configuração do GitHub Pages
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. **Repository Settings** → **Pages**
+2. **Source**: Deploy from a branch
+3. **Branch**: `gh-pages`
+4. **Folder**: `/ (root)`
 
-### Making a Progressive Web App
+## 📱 Design Responsivo
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- **Desktop**: Layout completo com sidebar de skills
+- **Tablet**: Layout adaptado com navegação otimizada  
+- **Mobile**: Stack vertical com componentes empilhados
 
-### Advanced Configuration
+## 🎨 Características do Design
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- **Glassmorphism**: Efeitos de vidro translúcido
+- **Animações CSS**: Transições suaves e hover effects
+- **Navegação Fixa**: Header sempre visível com scroll suave
+- **Radar Chart**: Visualização interativa de habilidades
+- **Cards Responsivos**: Layout flexível para projetos
 
-### Deployment
+## 📂 Estrutura do Projeto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```
+src/
+├── components/
+│   ├── App.js/css          # Componente principal
+│   ├── Header.js/css       # Navegação fixa
+│   ├── Home.js/css         # Seção inicial
+│   ├── Experience.js/css   # Timeline profissional
+│   ├── Projects.js/css     # Showcase de projetos
+│   ├── Skills.js/css       # Radar chart de skills
+│   ├── Contact.js/css      # Formulário de contato
+│   └── media/              # Assets e imagens
+├── index.js                # Entry point
+└── index.css               # Estilos globais
+```
 
-### `npm run build` fails to minify
+## 🤝 Contribuição
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Fork o projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
+
+## 📄 Licença
+
+Este projeto é licenciado sob a MIT License - veja o arquivo [LICENSE](LICENSE) para detalhes.
+
+## 👨‍💻 Autor
+
+**Kevin Costantino**
+- GitHub: [@KevinCostantino](https://github.com/KevinCostantino)
+- LinkedIn: [Kevin Costantino](https://linkedin.com/in/kevincostantino)
+- Portfolio: [kevincostantino.github.io/curriculum-page](https://kevincostantino.github.io/curriculum-page/)
+
+---
+
+⭐ **Se este projeto te ajudou, considere dar uma estrela!**
