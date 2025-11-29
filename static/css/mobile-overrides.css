@@ -28,12 +28,25 @@
    /* allow nav to be scrollable horizontally on very small widths and also wrap
        in a second line if necessary. This ensures all buttons are reachable. */
    .header nav ul{display:flex;flex-wrap:wrap;align-items:center;gap:6px;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:6px}
+   .header nav ul{scroll-snap-type:x proximity}
+   .header nav ul li{scroll-snap-align:center;min-width:-webkit-fit-content;min-width:-moz-fit-content;min-width:fit-content}
    .header nav ul::-webkit-scrollbar{height:6px}
    .header nav ul li a{display:inline-block;padding:8px 10px;border-radius:6px;white-space:nowrap}
    /* reduce the header right offset and padding for tiny screens so nothing is clipped */
    .header{right:0;padding-left:12px;padding-right:12px}
    /* make nav buttons slimmer on tiny screens to increase available space */
    .nav-button{padding:8px 12px;font-size:13px}
+}
+
+/* phone - further tighten for very narrow viewports to make sure all nav items are reachable */
+@media (max-width:375px){
+   .header nav ul{gap:4px;padding-bottom:4px}
+   /* make each nav item compact and snap into view when horizontally scrolled */
+   .header nav ul li{min-width:max-content;margin:0 4px}
+   .nav-button{padding:6px 8px;font-size:12px;letter-spacing:0.4px}
+   .nav-button span{display:inline-block;white-space:nowrap}
+   /* if nav still wraps to two lines, keep a light background so tap targets are obvious */
+   .header nav{background:linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0));padding-top:4px;padding-bottom:4px;border-radius:8px}
 }
 
 /* Improve skills/radar responsiveness */
@@ -49,6 +62,14 @@
    .skills-radar{width:min(86vw,320px)!important;height:auto!important;max-height:86vw!important}
    .skills-legend{padding:.8rem;font-size:0.95rem}
    .skill-item{padding:.7rem}
+}
+
+/* Final adjustments for very small phones to keep radar small and ensure the legend stacks cleanly */
+@media (max-width:360px){
+   .skills-radar{width:78vw!important;max-width:300px!important;height:auto!important}
+   .skills-legend{padding:.6rem;font-size:0.95rem}
+   .skills-columns{gap:.6rem}
+   .skill-item{padding:.6rem;font-size:.93rem}
 }
 
 @media (max-width:360px){
