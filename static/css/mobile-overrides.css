@@ -1,0 +1,33 @@
+/* Mobile overrides — safe, additive rules to improve small-screen layout
+   without changing DOM structure or pointer-events used by JS navigation.
+   Keep this file minimal and add after the main stylesheet in index.html.
+*/
+
+/* Make header area wrap instead of switching to stacked column so click
+   targets remain aligned with JS event listeners and scroll spy behavior.
+*/
+.header nav ul{
+  flex-wrap:wrap!important; /* allow nav items to wrap on small screens */
+  justify-content:flex-end!important; /* keep visual alignment */
+  gap:8px!important;
+}
+
+/* Small screens: keep header compact, reduce gaps and font sizes */
+@media (max-width:640px){
+  .header{padding:10px 16px 10px 8px; right:12px;}
+  .header nav ul{gap:6px}
+  .header nav ul li a{font-size:14px; padding:8px 10px}
+  /* Avoid changing pointer-events, z-index or layout that would break click handlers */
+  .header nav ul li{flex:0 0 auto}
+}
+
+/* Extra small devices: improve wrapping and give the nav a slight background
+   for tap targets but don't change position or stacking context. */
+@media (max-width:420px){
+  .header nav{display:block}
+  .header nav ul{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+  .header nav ul li a{display:inline-block;padding:8px 10px;border-radius:6px}
+}
+
+/* Leave other styles untouched; this file intentionally avoids overriding
+   any pointer-events or z-index that could interfere with the JS logic. */
