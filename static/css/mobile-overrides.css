@@ -12,14 +12,25 @@
   gap:8px!important;
 }
 
-/* For narrow/medium phones/tablets: prefer a 3-2 layout (3 items first row, 2 second row). */
+/* Layout for narrow tablets / big phones - prefer 3-2 layout so 5 buttons fit
+    in two lines (3 on first line, 2 on second). This activates below 700px. */
 @media (max-width:700px){
-   .header nav ul{justify-content:center!important;gap:8px!important;padding-bottom:8px}
-   /* first three go in the first row, each ~33% */
-   .header nav ul li{flex:0 0 calc(33.333% - 10px)!important;text-align:center}
-   .header nav ul li:nth-child(n+4){flex:0 0 calc(50% - 10px)!important}
-   .header nav ul li .nav-button{width:100%;display:inline-flex;justify-content:center}
-   .header nav ul li .nav-button span{white-space:nowrap}
+   .header nav ul{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;padding:6px 8px}
+   .header nav ul li{flex:0 0 33.333%;display:flex;justify-content:center}
+   /* push the last two items to occupy half-width each on the second row */
+   .header nav ul li:nth-child(4), .header nav ul li:nth-child(5){flex:0 0 50%}
+   .nav-button{width:calc(100% - 12px);box-sizing:border-box;display:inline-flex;justify-content:center;padding:8px 10px}
+   /* subtle visual marker so you can tell the override rules are being applied */
+   .header{outline:2px solid rgba(102,126,234,0.06)}
+}
+
+/* fallback for smaller phones where 3-2 may be too tight — use 2-2-1 layout
+    so the last button wraps alone on a third row. This activates below 520px. */
+@media (max-width:520px){
+   .header nav ul li{flex:0 0 50%;}
+   .header nav ul li:nth-child(5){flex:0 0 100%;}
+   .nav-button{padding:6px 8px;font-size:12px}
+   .header{outline:2px solid rgba(102,126,234,0.08)}
 }
 
 /* Small screens: keep header compact, reduce gaps and font sizes */
@@ -53,9 +64,6 @@
    .header nav ul{gap:4px;padding-bottom:4px}
    /* make each nav item compact and snap into view when horizontally scrolled */
    .header nav ul li{min-width:max-content;margin:0 4px}
-   /* enforce 2-2-1 layout for very small phones: first four items 50% each, last one 100% */
-   .header nav ul li{flex:0 0 calc(50% - 8px)!important}
-   .header nav ul li:nth-child(5){flex:0 0 calc(100% - 8px)!important}
    .nav-button{padding:6px 8px;font-size:12px;letter-spacing:0.4px}
    .nav-button span{display:inline-block;white-space:nowrap}
    /* if nav still wraps to two lines, keep a light background so tap targets are obvious */
