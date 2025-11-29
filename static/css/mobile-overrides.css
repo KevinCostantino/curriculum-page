@@ -15,7 +15,8 @@
 /* Layout for narrow tablets / big phones - prefer 3-2 layout so 5 buttons fit
     in two lines (3 on first line, 2 on second). This activates below 700px. */
 @media (max-width:700px){
-   .header nav ul{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;padding:6px 8px}
+   /* Strong overrides so desktop rules (and earlier !important) don't win */
+   .header nav ul{display:flex;flex-wrap:wrap!important;justify-content:center!important;gap:8px;padding:6px 8px}
    .header nav ul li{flex:0 0 33.333%;display:flex;justify-content:center}
    /* push the last two items to occupy half-width each on the second row */
    .header nav ul li:nth-child(4), .header nav ul li:nth-child(5){flex:0 0 50%}
@@ -27,8 +28,10 @@
 /* fallback for smaller phones where 3-2 may be too tight — use 2-2-1 layout
     so the last button wraps alone on a third row. This activates below 520px. */
 @media (max-width:520px){
-   .header nav ul li{flex:0 0 50%;}
-   .header nav ul li:nth-child(5){flex:0 0 100%;}
+   /* Force a centered 2-2-1 layout on narrower phones */
+   .header nav ul{justify-content:center!important;flex-wrap:wrap!important}
+   .header nav ul li{flex:0 0 50%!important}
+   .header nav ul li:nth-child(5){flex:0 0 100%!important}
    .nav-button{padding:6px 8px;font-size:12px}
    .header{outline:2px solid rgba(102,126,234,0.08)}
 }
