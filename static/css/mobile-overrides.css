@@ -7,9 +7,9 @@
    targets remain aligned with JS event listeners and scroll spy behavior.
 */
 .header nav ul{
-  flex-wrap:wrap; /* allow nav items to wrap on small screens */
-  justify-content:flex-end; /* keep visual alignment */
-  gap:8px;
+  flex-wrap:wrap!important; /* allow nav items to wrap on small screens */
+  justify-content:flex-end!important; /* keep visual alignment */
+  gap:8px!important;
 }
 
 /* Layout for narrow tablets / big phones - prefer 3-2 layout so 5 buttons fit
