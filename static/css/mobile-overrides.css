@@ -31,18 +31,12 @@
    /* Force a centered 2-2-1 layout on narrower phones */
    .header nav ul{justify-content:center!important;flex-wrap:wrap!important}
    .header nav ul li{flex:0 0 50%!important}
-   .header nav ul li:nth-child(5){flex:0 0 100%!important}
+   .header nav ul li{flex:0 0 100%!important}
    .nav-button{padding:6px 8px;font-size:12px}
    .header{outline:2px solid rgba(102,126,234,0.08)}
 }
 
-@media (max-width:500px){
-   /* Force a centered 2-2-1 layout on narrower phones */
-   .header nav ul{justify-content:center!important;flex-wrap:wrap!important}
-   .header nav ul li{flex:0 0 50%!important}
-   .nav-button{padding:6px 8px;font-size:12px}
-   .header{outline:2px solid rgba(102,126,234,0.08)}
-}
+
 
 
 /* Small screens: keep header compact, reduce gaps and font sizes */
