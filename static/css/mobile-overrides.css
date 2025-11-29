@@ -24,9 +24,37 @@
 /* Extra small devices: improve wrapping and give the nav a slight background
    for tap targets but don't change position or stacking context. */
 @media (max-width:420px){
-  .header nav{display:block}
-  .header nav ul{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
-  .header nav ul li a{display:inline-block;padding:8px 10px;border-radius:6px}
+   .header nav{display:block}
+   /* allow nav to be scrollable horizontally on very small widths and also wrap
+       in a second line if necessary. This ensures all buttons are reachable. */
+   .header nav ul{display:flex;flex-wrap:wrap;align-items:center;gap:6px;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:6px}
+   .header nav ul::-webkit-scrollbar{height:6px}
+   .header nav ul li a{display:inline-block;padding:8px 10px;border-radius:6px;white-space:nowrap}
+   /* reduce the header right offset and padding for tiny screens so nothing is clipped */
+   .header{right:0;padding-left:12px;padding-right:12px}
+   /* make nav buttons slimmer on tiny screens to increase available space */
+   .nav-button{padding:8px 12px;font-size:13px}
+}
+
+/* Improve skills/radar responsiveness */
+@media (max-width:768px){
+   /* make the radar scale to the viewport so it doesn't overflow */
+   .skills-radar{width:min(72vw,360px)!important;height:auto!important;max-height:72vw!important}
+   .skills-container{flex-direction:column;align-items:center;gap:1.5rem}
+   .skills-columns{flex-direction:column;gap:1rem}
+   .skills-legend{width:100%;padding:1rem}
+}
+
+@media (max-width:480px){
+   .skills-radar{width:min(86vw,320px)!important;height:auto!important;max-height:86vw!important}
+   .skills-legend{padding:.8rem;font-size:0.95rem}
+   .skill-item{padding:.7rem}
+}
+
+@media (max-width:360px){
+   /* ensure radar remains visually accessible even on tiny screens */
+   .skills-radar{width:84vw!important;max-width:320px!important}
+   .skills-legend h3{font-size:1.1rem}
 }
 
 /* Leave other styles untouched; this file intentionally avoids overriding
