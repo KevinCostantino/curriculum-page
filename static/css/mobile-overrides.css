@@ -118,8 +118,8 @@
    .skills-legend h3{font-size:1.2rem!important;margin-bottom:.6rem}
    .skill-item{padding:.6rem!important;font-size:.95rem!important}
 
-   .skills{flex-direction: column}
-   .skills-header p{color: #414141}
+   .skills{flex-direction: column !important}
+   .skills-header p{color: #414141 !important}
 }
 
 /* single-column on very small phones (-<=420px) to maximize reading space */
